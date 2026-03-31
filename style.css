@@ -1,8 +1,8 @@
 :root {
-    --bg-color: #0a0a0a;
-    --text-color: #ffffff;
-    --accent-color: #00d4ff;
-    --secondary-color: #1a1a1a;
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #F1471A;
+    --secondary-color: #ffffff;
     --font-main: 'Inter', sans-serif;
 }
 
@@ -36,7 +36,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    background: rgba(10, 10, 10, 0.8);
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     z-index: 1000;
 }
@@ -78,6 +78,8 @@ nav {
     grid-template-columns: 1.2fr 0.8fr;
     align-items: center;
     gap: 50px;
+    /* IMAGEM DE FUNDO SUTIL NA HERO */
+    background-image: url('WhatsApp Image 2026-03-31 at 11.48.03.jpeg');
 }
 
 h1 {
@@ -88,7 +90,7 @@ h1 {
 }
 
 .text-gradient {
-    background: linear-gradient(90deg, #00d4ff, #0055ff);
+    background: linear-gradient(135deg, #F1471A 0%, #FF8F66 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -105,7 +107,7 @@ h1 {
     gap: 20px;
 }
 
-.btn-primary, .btn-outline {
+.btn-primary, .btn-outline, .btn-terciary {
     padding: 15px 35px;
     border-radius: 50px;
     font-weight: 700;
@@ -118,23 +120,37 @@ h1 {
 
 .btn-primary {
     background-color: var(--accent-color);
-    color: #000;
+    color: #000000;
 }
 
 .btn-primary:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
+    box-shadow: 0 0 25px rgba(241, 71, 26, 0.5); /* Ajustado para a cor laranja */
 }
 
 .btn-outline {
-    border: 2px solid #333;
-    color: white;
+    background-color: var(--accent-color);
+    border: none;
+    color: rgb(0, 0, 0);
 }
 
 .btn-outline:hover {
-    border-color: var(--accent-color);
-    color: var(--accent-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(241, 71, 26, 0.5); /* Ajustado para a cor laranja */
 }
+
+.btn-terciary {
+background-color: var(--accent-color);
+    color: #000000;
+    margin-top: px;
+    margin-top: 2cm;
+}
+
+.btn-terciary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(241, 71, 26, 0.5); /* Ajustado para a cor laranja */
+}
+
 
 /* Animação Visual */
 .hero-visual {
@@ -145,11 +161,15 @@ h1 {
 .floating-card {
     width: 250px;
     height: 350px;
-    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    /* IMAGEM DENTRO DO CARD DO CELULAR */
+    background-image: url('WhatsApp Image 2026-03-31 at 11.48.04.jpeg'), linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+    background-size: cover;
+    background-position: center;
     border: 1px solid #333;
     border-radius: 20px;
     position: relative;
     animation: float 6s ease-in-out infinite;
+    margin-left: 5cm;
 }
 
 .icon-shield {
@@ -159,6 +179,11 @@ h1 {
     margin: 40px auto;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     box-shadow: 0 0 30px var(--accent-color);
+    /* ADICIONADO ÍCONE DE ESCUDO */
+    background-image: url('https://cdn-icons-png.flaticon.com/512/1067/1067562.png');
+    background-size: 60%;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 @keyframes float {
@@ -169,7 +194,7 @@ h1 {
 /* Seção Sobre */
 .about {
     padding: 100px 0;
-    background-color: #0d0d0d;
+    background-color: #F1471A;
 }
 
 h2 {
@@ -190,6 +215,8 @@ h2 {
     border-radius: 20px;
     transition: 0.3s;
     border: 1px solid transparent;
+    /* ÍCONE DE FUNDO DECORATIVO NO CARD */
+    background-image: url('https://www.transparenttextures.com/patterns/white-diamond.png');
 }
 
 .card:hover {
@@ -206,12 +233,13 @@ h2 {
 footer {
     padding: 80px 0;
     text-align: center;
-    border-top: 1px solid #222;
-}
+    border-top: 1px solid #ffffff;
+    /* IMAGEM SUTIL NO RODAPÉ */
+    background-color: #ffffff;
 
 footer p {
-    color: #666;
-    margin-bottom: 20px;
+    color:grey;
+    margin-bottom: 100px;
 }
 
 /* Responsividade */
